@@ -1,0 +1,51 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/csss/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+<body>
+    <header>
+
+        <a href="{% url 'home' %}">
+            <img src="{% static 'main/png/logo.png' %}" alt="Logo">
+            <span class="logo">ITstore</span>
+        </a>
+
+        <div class="log">
+            {% if not request.user.is_authenticated %}
+                <span><a href="{% url 'loginPage' %}"><li><i class="fas fa-sign-in-alt"></i> Login</li></a></span>
+            {% else %}
+                <div class="logout">
+                    <span class="logout">
+                        <h>Доброго дня, {{request.user}}.</h>
+                        <p><a href="{% url 'logout' %}"><i class="fas fa-sign-in-alt"></i> Logout</a></p>
+                    </span>
+                </div>
+            {% endif %}
+        </div>
+    </header>
+    <aside>
+        <ul>
+            <a href="{% url 'home' %}"><li><i class="fas fa-home"></i> Головна</li></a>
+            <a href="{% url 'catalog_all' %}"><li><i class="fas fa-th-list"></i> Каталог</li></a>
+            <a href="{% url 'profile' %}"><li><i class="fas fa-user"></i> Профіль</li></a>
+            <a href="{% url 'cart_detail' %}"><li><i class="fas fa-shopping-basket"></i> Корзина</li></a>
+            <a href="{% url 'about' %}"><li><i class="fas fa-address-card"></i> Інформація</li></a>
+            <a href="{% url 'feedback' %}"><li><i class="fas fa-address-book"></i> Зворотній зв'язок</li></a>
+        </ul>
+    </aside>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

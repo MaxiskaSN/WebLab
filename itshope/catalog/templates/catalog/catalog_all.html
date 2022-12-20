@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Каталог{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>Каталог</h1>
+    <ul>
+        <a href="{% url 'videocards' %}"><li><img src="{% static 'main/png/videocard.jpg' %}"></li></a>
+        <a href="{% url 'cpu' %}"><li><img src="{% static 'main/png/cpu.jpg' %}"></li></a>
+        <a href="{% url 'displays' %}"><li><img src="{% static 'main/png/display.jpg' %}"></li></a>
+    </ul>
+</div>
+{% endblock %}

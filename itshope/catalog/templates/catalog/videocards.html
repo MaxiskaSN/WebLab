@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Каталог{% endblock %}
+
+{% block content %}
+<div class="video">
+    <h1>Видеокарты</h1>
+        <div class="videocards">
+            {% for el in product %}
+            <a href="{% url 'product-detail' el.id %}" class="ssilka">
+                <div class="videocards-block">
+                    <img src="{{ el.image.url }}" alt="image">
+                    <h3>{{ el.name }}</h3>
+                    <p>{{ el.price }} ₴</p>
+                </div></a>
+            {% endfor %}
+        </div>
+</div>
+{% endblock %}

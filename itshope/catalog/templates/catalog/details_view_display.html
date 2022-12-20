@@ -1,0 +1,31 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Каталог{% endblock %}
+
+{% block content %}
+<div class="details_view">
+    <div class="product_page">
+        <div class="image_str"><img src="{{ product_name.image.url }}" alt="image"></div>
+        <div class="text_str">
+            <h1>{{ product_name.name }}</h1>
+            <p>{{ product_name.price }} ₴</p>
+            {% if product_name.available == True %}
+                <a href="{% url 'cart_add' product_name.id %}"><button>Купить  <i class="fas fa-shopping-basket"></i></button></a>
+            {%else%}
+                <a href=""><button class="but">Out of stock  <i class="fas fa-shopping-basket"></i></button></a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="stat"><h3>Характеристики</h3><span>{{ product_name.name }}:</span>
+        <ul class="stat_description">
+            <li>Производитель: {{ product_name.manufacturer }}</li>
+            <li>Диагональ: {{ product_name.displays.diagonal }}</li>
+            <li>Разрешение экрана: {{ product_name.displays.resolution }}</li>
+            <li>Тип матрицы: {{ product_name.displays.matrix_type }}</li>
+            <li>Особенности: {{ product_name.displays.features }}</li>
+
+
+        </ul>
+    </div>
+</div>
+{% endblock %}

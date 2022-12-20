@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Каталог{% endblock %}
+
+{% block content %}
+<div class="cart">
+    <h1>Корзина</h1>
+    {% for key,value in request.session.cart.items %}
+        <div class="cart_cycle">
+            <div class="value">
+            <p>{{value.name}}</p>
+                </div>
+            <div class="list">
+                <p><a href="{% url 'item_increment' value.id %}"><button class="but">Больше</button></a></p>
+                <p>{{value.quantity}}</p>
+                <p><a href="{% url 'item_decrement' value.id %}"><button class="but">Меньше</button></a></p>
+                <p><a href="{% url 'item_clear' value.id %}"><button class="but">Видалити</button></a></p>
+                <p>{{value.price}}</p>
+            </div>
+        </div>
+    {% endfor %}
+        <h2>{{ cart.get_total_price }}</h2>
+    <div class="butttons">
+        <p><a href="{% url 'home' %}"><button class="buttton">Оплата</button></a></p>
+        <p><a href="{% url 'home' %}"><button class="buttton">Продолжить покупки</button></a></p>
+    </div>
+</div>
+{% endblock %}

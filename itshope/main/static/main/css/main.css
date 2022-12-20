@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap');
+
+header{
+
+width: 100%;
+height: 10vh;
+border-bottom: 2px solid #f2f2f2;
+
+}
+aside{
+    font-family: 'Open Sans';
+    float: left;
+    background: #fff;
+    width: 10%;
+    padding: 2.5%;
+    height: 100vh;
+    color: #000;
+    border-right: 2px solid #f2f2f2;
+}
+
+header img {
+    width: 50px;
+    float: left;
+    position: relative;
+    top: 25px;
+    left: 40px;
+}
+
+header .logo {
+    font-size: 40px;
+    margin-left: 10px;
+    font-weight: bold;
+    position: relative;
+    top: 22px;
+    left: 55px;
+}
+
+header .logo:hover {
+    text-decoration: none;
+}
+
+header .log span {
+    font-style: italic;
+    list-style: none;
+    text-decoration: none;
+    float: right;
+    margin: -15px 50px 0px 0px;
+}
+
+header .log span p {
+    font-style: italic;
+    text-decoration: none;
+    display: inline;
+    margin-left: 10px;
+}
+
+
+body {
+    font-family: 'Open Sans';
+    margin: 0;
+    background: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+aside ul {list-style: none;}
+aside ul li {
+    color: #000;
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: transform .5s ease;
+}
+
+aside ul li:hover, aside ul li a:hover {
+    color: #ff4d4d;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+header a {
+    color: #000;
+    transition: transform .5s ease;
+}
+
+main .features {
+    float: left;
+    color: #000;
+    margin-top: 100px;
+    text-align: center;
+    width: 75%;
+}
+
+main .features h1 {font-size: 50px; margin-left: 50px;}
+main .features p {max-width: 400px; margin: 20px auto;}
+
+main .features ul {list-style: none}
+main .features ul li {
+    color: #000;
+    display: inline;
+    margin-left: 50px;
+}
+
+main .features img {
+    transition: 0.5s;
+    width: 300px;
+}
+
+main .features img:hover {
+    filter: blur(5px);
+    transform: scale(1.05);
+}
+
+
+
+main .video {
+    text-align: center;
+}
+main .videocards {
+    display: table;
+    float: left;
+    color: #000;
+    text-align: center;
+    width: 75%;
+}
+
+main .videocards-block {
+    width: 100%;
+    height: 150px;
+    display: relative;
+    border-width: 1px;
+    margin-top: 25px;
+    vertical-align: middle;
+    margin-left: 100px;
+    vertical-align: middle;
+    transition: transform .3s ease;
+
+}
+
+
+main .videocards-block img {
+    width: 200px;
+    float: left;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+main .videocards-block h3 {
+    float: left;
+    margin-top: 50px;
+    margin-left: 250px;
+    font-size: x-large;
+}
+
+main .videocards-block p {
+    float:right;
+    margin-top: 50px;
+    margin-right: 100px;
+    font-size: x-large;
+}
+
+main .videocards-block:hover {
+    transform: scale(1.02);
+}
+
+main .ssilka {
+    color: #000;
+}
+
+main .product_page {
+    height: 550px;
+    display: block;
+}
+
+main .image_str {
+    float: left;
+    margin-top: 75px;
+    margin-left: 75px;
+    width: auto;
+}
+
+main .image_str img {
+    width: 650px;
+
+}
+main .text_str {
+    margin-top: 150px;
+    float: right;
+    margin-right: 250px;
+    width: auto%;
+}
+
+main .text_str .OUT {
+float: right;
+margin-right: 30px;
+color: red;
+font-size: 24px;
+
+}
+
+
+main .text_str p {
+
+    float: right;
+    font-size: 24px;
+}
+
+main .text_str button {
+    float:right;
+    margin-right: 30px;
+    margin-top: 15px;
+
+  background-color: #4CAF50; /* Green */
+  border-radius: 4px;
+  border: 2px solid #4CAF50;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  transition-duration: 0.4s ease;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+
+
+}
+
+main .text_str .but {
+    float:right;
+    margin-right: 30px;
+    margin-top: 15px;
+
+  background-color: #E32636; /* Green */
+  border-radius: 4px;
+  border: 2px solid #E32636;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  transition-duration: 0.4s ease;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+
+
+}
+
+main .text_str button:hover {
+    background-color: #fff;
+    color: #555;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transform: scale(1.05);
+
+}
+
+main .text_str button:active {
+    transform: scale(0.95);
+}
+main .stat {
+    float: left;
+    margin-left: 135px;
+    margin-top: 50px;
+}
+
+main .details_view .stat span, h3 {
+    display: inline;
+}
+
+main .stat span {
+    margin-left: 10px;
+    font-size: 20px;
+    color: #888;
+}
+
+main .cpu-block {
+
+    width: 100%;
+    height: 150px;
+    display: relative;
+    border-width: 1px;
+    margin-top: 25px;
+    vertical-align: middle;
+    margin-left: 100px;
+    vertical-align: middle;
+    transition: transform .3s ease;
+
+}
+
+
+main .cpu-block img {
+
+    width: 200px;
+    float: left;
+    margin-left: 100px;
+    margin-top: 0px;
+}
+
+main .cpu-block h3 {
+    float: left;
+    margin-top: 50px;
+    margin-left: 250px;
+    font-size: x-large;
+}
+
+main .cpu-block p {
+    float:right;
+    margin-top: 50px;
+    margin-right: 100px;
+    font-size: x-large;
+}
+
+main .cpu-block:hover {
+    transform: scale(1.02);
+}
+
+
+main .cart {
+    display: block;
+    text-align: center;
+
+}
+
+
+main .cart_cycle {
+    margin-top: 25px;
+    height: 100px;
+    vertical-align: middle;
+    transition-duration: 0.5s ease;
+}
+
+main .total {
+    float: right;
+}
+
+main .cart_cycle p{
+    display: inline;
+    margin-left: 10px;
+}
+
+main .cart_cycle .list{
+    float:right;
+    margin-right: 150px;
+    display: inline;
+}
+
+main .cart_cycle .value{
+    float:left;
+    margin-left: 150px;
+    margin-top: 7px;
+    display: inline;
+}
+
+
+main .buttton {
+    display: inline;
+    float: right;
+    margin-left: 10px;
+}
+
+main .butttons {
+    margin-right: 200px;
+}
+
+main .cart_cycle .but {
+
+  background-color: #E32636; /* Green */
+  border-radius: 4px;
+  border: 2px solid #E32636;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+main .cart_cycle .but:hover {
+    background-color: #fff;
+    color: #555;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+main .butttons .buttton {
+
+  background-color: #E32636; /* Green */
+  border-radius: 4px;
+  border: 2px solid #E32636;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+main .butttons .buttton:hover {
+    background-color: #fff;
+    color: #555;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+main .features .but {
+  margin-top: 30px;
+
+  background-color: #E32636; /* Green */
+  border-radius: 4px;
+  border: 2px solid #E32636;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  transition-duration: 0.4s ease;
+}
+
+main .features .but:hover {
+    background-color: #fff;
+    color: #555;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transform: scale(1.05)
+
+}

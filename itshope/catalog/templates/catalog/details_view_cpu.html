@@ -1,0 +1,31 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Каталог{% endblock %}
+
+{% block content %}
+<div class="details_view">
+    <div class="product_page">
+        <div class="image_str"><img src="{{ product_name.image.url }}" alt="image"></div>
+        <div class="text_str">
+            <h1>{{ product_name.name }}</h1>
+            <p>{{ product_name.price }} ₴</p>
+            {% if product_name.available == True %}
+                <a href="{% url 'cart_add' product_name.id %}"><button>Купить  <i class="fas fa-shopping-basket"></i></button></a>
+            {%else%}
+                <a href=""><button class="but">Out of stock  <i class="fas fa-shopping-basket"></i></button></a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="stat"><h3>Характеристики</h3><span>{{ product_name.name }}:</span>
+        <ul class="stat_description">
+            <li>Производитель: {{ product_name.manufacturer }}</li>
+            <li>Частота процессора: {{ product_name.cpus.clock_speed }}</li>
+            <li>Количество ядер: {{ product_name.cpus.number_of_cores }}</li>
+            <li>Сокет: {{ product_name.cpus.soket }}</li>
+            <li>Семейство процессора: {{ product_name.cpus.family }}</li>
+            <li>Поколение процессора: {{ product_name.cpus.generation }}</li>
+            <a href="{% url 'cart_add' product_name.id %}">Add To Cart</a>
+        </ul>
+    </div>
+</div>
+{% endblock %}
